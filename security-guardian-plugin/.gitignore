@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+.nyc_output/
+*.js.map
+security-report.md
+security-report.json
+*.security-report.*

@@ -1,0 +1,37 @@
+{
+  "name": "security-guardian",
+  "displayName": "Security Guardian",
+  "version": "1.0.0",
+  "description": "Scans your repository for security vulnerabilities, exposed secrets, risky licenses, and code security issues using multiple security engines.",
+  "author": "Security Guardian Contributors",
+  "license": "MIT",
+  "icon": "🛡️",
+  "commands": [
+    {
+      "name": "security-guardian",
+      "description": "Run a full security scan on the current repository",
+      "promptFile": ".claude/commands/security-guardian.md",
+      "aliases": ["sg", "security"]
+    },
+    {
+      "name": "security-guardian-changed",
+      "description": "Scan only git-modified files for security issues",
+      "promptFile": ".claude/commands/security-guardian-changed.md",
+      "aliases": ["sg-changed"]
+    },
+    {
+      "name": "security-guardian-deps",
+      "description": "Scan dependency vulnerabilities only",
+      "promptFile": ".claude/commands/security-guardian-deps.md",
+      "aliases": ["sg-deps"]
+    }
+  ],
+  "mcpServers": {},
+  "permissions": {
+    "filesystem": "read",
+    "network": false,
+    "shell": true
+  },
+  "readme": "README.md",
+  "skill": "SKILL.md"
+}
