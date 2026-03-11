@@ -1,0 +1,53 @@
+{
+  "name": "@security-guardian/claude-plugin",
+  "version": "1.0.0",
+  "description": "Security Guardian — Claude Code plugin for repository security scanning",
+  "author": "Security Guardian Contributors",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "security-guardian": "dist/commands/securityGuardian.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "scan": "ts-node src/commands/securityGuardian.ts",
+    "scan:changed": "ts-node src/commands/securityGuardian.ts --changed",
+    "scan:deps": "ts-node src/commands/securityGuardian.ts --dependencies",
+    "scan:json": "ts-node src/commands/securityGuardian.ts --json",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "security",
+    "scanner",
+    "claude-code",
+    "plugin",
+    "vulnerability",
+    "secrets",
+    "license",
+    "sast",
+    "dependency-audit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/security-guardian-plugin"
+  },
+  "files": [
+    "dist/",
+    "SKILL.md",
+    "plugin.json",
+    ".claude/",
+    "README.md"
+  ]
+}
