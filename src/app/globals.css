@@ -1,3 +1,153 @@
+/* ── PanDisplay ── */
+@font-face {
+  font-family: 'PanDisplay';
+  src: url('/fonts/PanDisplay-Light.woff2') format('woff2'),
+       url('/fonts/PanDisplay-Light.woff')  format('woff'),
+       url('/fonts/PanDisplay-Light.otf')   format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PanDisplay';
+  src: url('/fonts/PanDisplay-Regular.woff2') format('woff2'),
+       url('/fonts/PanDisplay-Regular.woff')  format('woff'),
+       url('/fonts/PanDisplay-Regular.otf')   format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PanDisplay';
+  src: url('/fonts/PanDisplay-Bold.woff2') format('woff2'),
+       url('/fonts/PanDisplay-Bold.woff')  format('woff'),
+       url('/fonts/PanDisplay-Bold.otf')   format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── PanText ── */
+@font-face {
+  font-family: 'PanText';
+  src: url('/fonts/PanText-Light.woff2') format('woff2'),
+       url('/fonts/PanText-Light.woff')  format('woff'),
+       url('/fonts/PanText-Light.otf')   format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PanText';
+  src: url('/fonts/PanText-Regular.woff2') format('woff2'),
+       url('/fonts/PanText-Regular.woff')  format('woff'),
+       url('/fonts/PanText-Regular.otf')   format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PanText';
+  src: url('/fonts/PanText-Bold.woff2') format('woff2'),
+       url('/fonts/PanText-Bold.woff')  format('woff'),
+       url('/fonts/PanText-Bold.otf')   format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── GothamSSm ── */
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-XLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-XLightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-Light.woff2') format('woff2'),
+       url('/fonts/GothamSSm-Light.otf')   format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-LightItalic.woff2') format('woff2'),
+       url('/fonts/GothamSSm-LightItalic.otf')   format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-Book.woff2') format('woff2'),
+       url('/fonts/GothamSSm-Book.otf')   format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-BookItalic.woff2') format('woff2'),
+       url('/fonts/GothamSSm-BookItalic.otf')   format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-Medium.woff2') format('woff2'),
+       url('/fonts/GothamSSm-Medium.otf')   format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-MediumItalic.woff2') format('woff2'),
+       url('/fonts/GothamSSm-MediumItalic.otf')   format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GothamSSm';
+  src: url('/fonts/GothamSSm-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -7,123 +157,383 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+  --font-sans: 'GothamSSm', Helvetica, sans-serif;
+  --font-display: 'PanDisplay', Arial, sans-serif;
+  --font-text: 'PanText', Arial, sans-serif;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.809 0.105 251.813);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.546 0.245 262.881);
-  --chart-4: oklch(0.488 0.243 264.376);
-  --chart-5: oklch(0.424 0.199 265.638);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+  --background: #ffffff;
+  --foreground: #211710;
+  --card: #ffffff;
+  --card-foreground: #211710;
+  --primary: #211710;
+  --primary-foreground: #ffffff;
+  --muted: #f5f4f2;
+  --muted-foreground: #767676;
+  --border: #e6e6e6;
+  --input: #e6e6e6;
+  --ring: #211710;
+  --destructive: #d91f46;
+  --radius: 0rem;
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.809 0.105 251.813);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.546 0.245 262.881);
-  --chart-4: oklch(0.488 0.243 264.376);
-  --chart-5: oklch(0.424 0.199 265.638);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Pandora tokens — exact values from live DOM */
+  --p-black:            #211710;   /* rgb(33,23,16)  — body text */
+  --p-tab-active:       #27251f;   /* rgb(39,37,31)  — active tab */
+  --p-divider:          #e6e6e6;   /* rgb(230,230,230) */
+  --p-input-border:     #e6e6e6;   /* bottom border on inputs */
+  --p-input-border-focus: #211710;
+  --p-btn-primary:      #828282;   /* rgb(130,130,130) — main CTA */
+  --p-btn-fb:           #1877f2;   /* rgb(24,119,242) */
+  --p-btn-google-text:  #71706c;   /* rgb(113,112,108) */
+  --p-muted:            #767676;
+  --p-gray-nav:         #333333;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
+  * { @apply border-border; box-sizing: border-box; }
   body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
+    background: #ffffff;
+    color: var(--p-black);
+    font-family: 'GothamSSm', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
+
+/* ─────────────────────────────────────────
+   FLOATING-LABEL FIELD
+   Matches Pandora UK live implementation:
+   input height 52px, padding-top 13px,
+   bottom-border only 1px solid #e6e6e6,
+   label floats on focus / filled
+───────────────────────────────────────── */
+.p-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.p-input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  padding: 13px 36px 0 0;
+  background: #ffffff;
+  border: none;
+  border-bottom: 1px solid var(--p-input-border);
+  border-radius: 0;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--p-black);
+  outline: none;
+  transition: border-bottom-color 0.15s;
+}
+
+.p-input:focus {
+  border-bottom-color: var(--p-input-border-focus);
+}
+
+/* Floating label — sits centred in the field, slides up on fill/focus */
+.p-field-label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--p-black);
+  pointer-events: none;
+  transition: top 0.15s ease, font-size 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+/* Float up: input focused OR has a non-empty value (placeholder=" " trick) */
+.p-input:focus ~ .p-field-label,
+.p-input:not(:placeholder-shown) ~ .p-field-label {
+  top: 6px;
+  transform: none;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--p-muted);
+}
+
+.p-field-label span {
+  color: #d91f46;
+  margin-left: 1px;
+}
+
+/* ─────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────── */
+.p-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: opacity 0.15s, background 0.15s;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.p-btn:hover  { opacity: 0.88; }
+.p-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* Main CTA — gray, height 45px (matches live DOM) */
+.p-btn-primary {
+  height: 45px;
+  background: var(--p-btn-primary);
+  color: #ffffff;
+  border: 1px solid var(--p-btn-primary);
+  margin-bottom: 12px;
+}
+
+/* Social buttons — height 48px */
+.p-btn-fb {
+  height: 48px;
+  background: var(--p-btn-fb);
+  color: #ffffff;
+  border: 1px solid var(--p-btn-fb);
+  letter-spacing: 0.55px;
+  margin-bottom: 12px;
+}
+
+.p-btn-google {
+  height: 48px;
+  background: #ffffff;
+  color: var(--p-btn-google-text);
+  border: 1px solid var(--p-divider);
+  letter-spacing: 0.55px;
+  margin-bottom: 12px;
+}
+
+/* Order panel button */
+.p-btn-order {
+  height: 45px;
+  background: #ffffff;
+  color: var(--p-black);
+  border: 1px solid var(--p-btn-primary);
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+/* ─────────────────────────────────────────
+   TABS
+   Active: 20px, fw 500, border-bottom 3px solid #27251f
+   Inactive: 20px, fw 500, no border, muted colour
+───────────────────────────────────────── */
+.p-tabs {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.p-tab {
+  flex: 1;
+  padding: 0 0 1px 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  color: var(--p-muted);
+  font-family: inherit;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.p-tab.active {
+  color: var(--p-tab-active);
+  border-bottom-color: var(--p-tab-active);
+}
+
+.p-tab:hover:not(.active) {
+  color: var(--p-black);
+}
+
+/* Tab content spacing — mt 16px on the pane */
+.p-tab-content {
+  margin-top: 16px;
+}
+
+/* ─────────────────────────────────────────
+   CHECKBOX
+───────────────────────────────────────── */
+.p-checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.p-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--p-black);
+}
+
+.p-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--p-input-border);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.p-checkbox.checked {
+  background: var(--p-black);
+  border-color: var(--p-black);
+}
+
+/* ─────────────────────────────────────────
+   ORDER STATUS PANEL
+   card-header: fs 24px fw 700 tt uppercase
+                border-bottom 1px solid rgba(0,0,0,0.125)
+                pb 20px
+   card-body:   mt 30px, no padding
+───────────────────────────────────────── */
+.p-order-header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--p-black);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.p-order-body {
+  margin-top: 30px;
+}
+
+.p-order-field {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.p-order-input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  padding: 13px 36px 0 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--p-input-border);
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--p-black);
+  outline: none;
+  transition: border-bottom-color 0.15s;
+}
+
+.p-order-input:focus {
+  border-bottom-color: var(--p-black);
+}
+
+.p-order-label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--p-black);
+  pointer-events: none;
+  transition: top 0.15s ease, font-size 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.p-order-input:focus ~ .p-order-label,
+.p-order-input:not(:placeholder-shown) ~ .p-order-label {
+  top: 6px;
+  transform: none;
+  font-size: 11px;
+  color: var(--p-muted);
+}
+
+/* ─────────────────────────────────────────
+   NAV
+───────────────────────────────────────── */
+.p-nav-link {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--p-black);
+  white-space: nowrap;
+  padding: 0 4px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.p-nav-link:hover { opacity: 0.65; }
+
+/* ─────────────────────────────────────────
+   DASHBOARD  — uses same tokens as login
+───────────────────────────────────────── */
+
+/* Sidebar nav link */
+.dash-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 0;
+  font-family: 'GothamSSm', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--p-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.dash-nav-link.active,
+.dash-nav-link:hover {
+  color: var(--p-black);
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-up { animation: fadeUp 0.45s ease-out forwards; }
+.d1 { animation-delay: 0.05s; opacity: 0; }
+.d2 { animation-delay: 0.12s; opacity: 0; }
+.d3 { animation-delay: 0.20s; opacity: 0; }
+.d4 { animation-delay: 0.28s; opacity: 0; }
+.d5 { animation-delay: 0.36s; opacity: 0; }
