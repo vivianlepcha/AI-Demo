@@ -200,6 +200,8 @@
   --p-btn-google-text:  #71706c;   /* rgb(113,112,108) */
   --p-muted:            #767676;
   --p-gray-nav:         #333333;
+  --p-gold:             #c8a035;   /* Pandora brand gold — reward labels, icons */
+  --p-page-bg:          #f5f4f2;   /* off-white page background */
 }
 
 @layer base {
@@ -296,12 +298,18 @@
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: opacity 0.15s, background 0.15s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;
   gap: 10px;
   text-decoration: none;
 }
 
-.p-btn:hover  { opacity: 0.88; }
+.p-btn:hover { opacity: 0.88; }
+.p-btn.p-btn-primary:hover {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  opacity: 1;
+}
 .p-btn:disabled { opacity: 0.55; cursor: not-allowed; }
 
 /* Main CTA — gray, height 45px (matches live DOM) */
@@ -334,12 +342,21 @@
 
 /* Order panel button */
 .p-btn-order {
-  height: 45px;
-  background: #ffffff;
+  height: 64px;
+  width: 450px;
+  background-color: #ffffff;
   color: var(--p-black);
-  border: 1px solid var(--p-btn-primary);
+  border: 1px solid var(--p-divider);
+  font-size: 11px;
   letter-spacing: 2px;
   margin-bottom: 0;
+}
+
+.p-btn-order:hover {
+  background-color: #ffffff;
+  color: var(--p-black);
+  border-color: var(--p-black);
+  opacity: 1;
 }
 
 /* ─────────────────────────────────────────

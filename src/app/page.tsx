@@ -22,7 +22,7 @@ interface StoredUser extends UserData { password: string; }
 function SiteHeader({ user, onSignOut }: { user: UserData | null; onSignOut: () => void }) {
   return (
     <header className="border-b border-[var(--p-divider)] bg-white sticky top-0 z-50">
-      <div className="max-w-[1380px] mx-auto px-6 flex items-center h-[64px] gap-6">
+      <div className="max-w-[1380px] mx-auto px-6 flex items-center h-[80px] gap-6">
         <a href="#" className="flex-shrink-0">
           <Image src="/brand-logo.svg" alt="Pandora" width={140} height={38} priority />
         </a>
@@ -47,9 +47,9 @@ function SiteHeader({ user, onSignOut }: { user: UserData | null; onSignOut: () 
         </div>
       </div>
       <nav className="border-t border-[var(--p-divider)]">
-        <div className="max-w-[1380px] mx-auto px-6 flex items-center h-[44px] gap-1 overflow-x-auto">
+        <div className="max-w-[1380px] mx-auto px-6 flex items-center justify-between h-[56px] overflow-x-auto">
           {["Mother's Day","New & featured","Charms","Bracelets","Rings","Earrings","Necklaces","Engraving","Gifts","Collections","Shop by","Lab-grown Diamonds"].map(item => (
-            <a key={item} href="#" className="p-nav-link px-3 py-1 flex-shrink-0">{item}</a>
+            <a key={item} href="#" className="p-nav-link flex-shrink-0">{item}</a>
           ))}
         </div>
       </nav>
@@ -192,7 +192,7 @@ function LoginForm({ onSignIn }: { onSignIn: (email: string, password: string, r
         <a href="#" className="underline text-[var(--p-black)] hover:opacity-60">privacy policy.</a>
       </p>
 
-      <div className="mt-5 p-3 bg-[#f5f4f2] border border-[var(--p-divider)]">
+      <div className="mt-5 p-3 bg-[var(--p-page-bg)] border border-[var(--p-divider)]">
         <p className="text-[11px] text-[var(--p-muted)]">
           <strong className="text-[var(--p-black)]">Demo:</strong> demo@pandora.net / pandora123
         </p>
@@ -232,7 +232,7 @@ function JoinForm({ onRegister }: { onRegister: (d: { email: string; password: s
     if (p.length < 6) return { w: '25%', color: '#d91f46', label: 'Weak' };
     if (p.length < 8) return { w: '50%', color: '#f79e13', label: 'Fair' };
     if (/[A-Z]/.test(p) && /[0-9]/.test(p)) return { w: '100%', color: '#00823a', label: 'Strong' };
-    return { w: '75%', color: '#c8a035', label: 'Good' };
+    return { w: '75%', color: 'var(--p-gold)', label: 'Good' };
   })();
 
   return (
@@ -339,7 +339,7 @@ function OrderStatusPanel() {
           <input type="email" value={orderEmail} onChange={e => setOrderEmail(e.target.value)} placeholder=" " className="p-order-input" />
           <label className="p-order-label">Order Email</label>
         </div>
-        <button className="p-btn p-btn-order">Check Status</button>
+        <button className="p-btn-order">CHECK STATUS</button>
       </div>
     </div>
   );
@@ -440,11 +440,11 @@ function Dashboard({ user, onSignOut }: { user: UserData; onSignOut: () => void 
     { id: 'UK97851', date: '14 Jan 2025', item: 'Rose Gold Heart Charm', status: 'Delivered', amount: '£45.00' },
   ];
   return (
-    <main className="flex-1 bg-[#f8f8f8]">
-      <div className="bg-[#1a1a1a] text-white py-10 px-6">
+    <main className="flex-1 bg-[var(--p-page-bg)]">
+      <div className="bg-[var(--p-black)] text-white py-10 px-6">
         <div className="max-w-[1100px] mx-auto flex items-center justify-between">
           <div className="anim-up d1">
-            <p className="text-[11px] tracking-[0.2em] uppercase text-[#c8a035] mb-1">My Pandora</p>
+            <p className="text-[11px] tracking-[0.2em] uppercase text-[var(--p-gold)] mb-1">My Pandora</p>
             {/* VULN: XSS via dangerouslySetInnerHTML with unsanitised user-controlled data (CWE-79) */}
             {/* Snyk: "Cross-site Scripting (XSS)" */}
             {/* user.firstName comes from localStorage and is never sanitised */}
@@ -470,7 +470,7 @@ function Dashboard({ user, onSignOut }: { user: UserData; onSignOut: () => void 
             { label: 'Rewards', value: '0', icon: Gift },
           ].map(({ label, value, icon: Icon }) => (
             <div key={label} className="dash-card text-center bg-white">
-              <Icon size={22} className="mx-auto mb-3 text-[#c8a035]" />
+              <Icon size={22} className="mx-auto mb-3 text-[var(--p-gold)]" />
               <div style={{ fontFamily: "'PanDisplay', Arial, sans-serif", fontSize: '32px', fontWeight: '300' }}>{value}</div>
               <div className="text-[11px] tracking-[0.12em] uppercase text-[var(--p-muted)] mt-1">{label}</div>
             </div>
@@ -482,13 +482,13 @@ function Dashboard({ user, onSignOut }: { user: UserData; onSignOut: () => void 
             <a href="#" className="text-[12px] underline text-[var(--p-muted)] hover:text-[var(--p-black)]">View All</a>
           </div>
           <div className="bg-white border border-[var(--p-divider)]">
-            <div className="hidden lg:grid grid-cols-5 gap-4 px-6 py-3 bg-[#f5f4f2] border-b border-[var(--p-divider)]">
+            <div className="hidden lg:grid grid-cols-5 gap-4 px-6 py-3 bg-[var(--p-page-bg)] border-b border-[var(--p-divider)]">
               {['Order','Date','Item','Status','Total'].map(c => (
                 <div key={c} className="text-[10px] tracking-[0.15em] uppercase text-[var(--p-muted)] font-bold">{c}</div>
               ))}
             </div>
             {orders.map((o, i) => (
-              <div key={o.id} className={`grid lg:grid-cols-5 gap-2 lg:gap-4 px-6 py-4 items-center hover:bg-[#f9f9f9] transition-colors ${i < orders.length - 1 ? 'border-b border-[var(--p-divider)]' : ''}`}>
+              <div key={o.id} className={`grid lg:grid-cols-5 gap-2 lg:gap-4 px-6 py-4 items-center hover:bg-[var(--p-page-bg)] transition-colors ${i < orders.length - 1 ? 'border-b border-[var(--p-divider)]' : ''}`}>
                 <div className="text-[13px] font-medium">{o.id}</div>
                 <div className="text-[13px] text-[var(--p-muted)]">{o.date}</div>
                 <div className="text-[13px]">{o.item}</div>
@@ -525,12 +525,13 @@ function Dashboard({ user, onSignOut }: { user: UserData; onSignOut: () => void 
             { title: 'Delivery Addresses', desc: 'Manage your addresses', icon: Package, cta: 'Manage' },
           ].map(({ title, desc, icon: Icon, cta }) => (
             <div key={title} className="dash-card bg-white group cursor-pointer">
-              <Icon size={20} className="text-[#c8a035] mb-3" />
+              <Icon size={20} className="text-[var(--p-gold)] mb-3" />
               <h3 className="text-[14px] font-bold tracking-[0.04em] mb-1">{title}</h3>
               <p className="text-[12px] text-[var(--p-muted)] mb-4 leading-relaxed">{desc}</p>
-              <span className="flex items-center gap-1 text-[11px] tracking-[0.08em] uppercase font-bold text-[var(--p-black)] group-hover:text-[#c8a035] transition-colors">
+              <span className="flex items-center gap-1 text-[11px] tracking-[0.08em] uppercase font-bold text-[var(--p-black)] group-hover:text-[var(--p-gold)] transition-colors">
                 {cta}<ChevronRight size={12} />
               </span>
+
             </div>
           ))}
         </div>
